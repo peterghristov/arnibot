@@ -9,7 +9,7 @@ client.once('ready', () => {
 client.on('message', message => {
     if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-    message.channel.send("What do you mean " + message.content + '?');
+    message.channel.send("Malchi s tva " + message.content + ' ami varvi bluskai!!!');
 });
 
 //console.log(process.env.BOT_TOKEN)
