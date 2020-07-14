@@ -12,4 +12,6 @@ client.on('message', message => {
     message.channel.send("What do you mean " + message.content + '?');
 });
 
-client.login(config.token);
+//console.log(process.env.BOT_TOKEN)
+
+client.login(process.env.BOT_TOKEN);
