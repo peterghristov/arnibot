@@ -46,14 +46,14 @@ client.on('message', message => {
         // @TODO Lock the file
         const data = JSON.parse(File.readFileSync(config.databaseFile, 'utf8'))
 
-        for (var i = 0 ; i < db.excersizes.length ; i++)
+        for (var i = 0 ; i < data.excersizes.length ; i++)
         {
-            if (db.excersizes[i].name == args[1])
+            if (data.excersizes[i].name == args[1])
             {
-                db.excersizes[i].reps.current += parseInt(args[2], 10);
+                data.excersizes[i].reps.current += parseInt(args[2], 10);
 
-                File.writeFileSync(config.databaseFile, JSON.stringify(db));
-                message.channel.send("Fuck yeah bro " + args[1] + " are now at " + db.excersizes[i].reps.current + " out of " + db.excersizes[i].reps.max);
+                File.writeFileSync(config.databaseFile, JSON.stringify(data));
+                message.channel.send("Fuck yeah bro " + args[1] + " are now at " + data.excersizes[i].reps.current + " out of " + data.excersizes[i].reps.max);
 
                 return;
             }
