@@ -16,6 +16,10 @@ client.on('message', message => {
     //message.channel.send('Malchi s tva "' + args + '" ami varvi bluskai!!! also the channel ID is ' + message.guild.id);
 
 
+    if ("help" == args[0])
+    {
+        message.channel.send("The available commands are 'info' to view current all current and max reps and 'rep <excersize name> <rep count>' to add repetitions to an excerisze.");
+    }
     if ("info" == args[0])
     {
         File.readFile(config.databaseFile, 'utf8', function (err, data) {
