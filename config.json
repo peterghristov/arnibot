@@ -1,3 +1,4 @@
 {
-	"prefix": "!arni"
+	"prefix": "a",
+        "databaseFile" : "./database.json"
 }
