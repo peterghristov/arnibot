@@ -18,9 +18,9 @@ client.on('message', message => {
 
     if ("help" == args[0])
     {
-        message.channel.send("The available commands are 'info' to view current all current and max reps and 'rep <excersize name> <rep count>' to add repetitions to an excerisze.");
+        message.channel.send("The available commands are 'info' to view all current and max reps and 'rep <excersize name> <rep count>' to add repetitions to an excerisze.");
     }
-    if ("info" == args[0])
+    else if ("info" == args[0])
     {
         File.readFile(config.databaseFile, 'utf8', function (err, data) {
             if (err) throw err;
